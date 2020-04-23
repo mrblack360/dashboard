@@ -1,6 +1,6 @@
 # Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.2. to present latest news about [COVID-19](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) in [Tanzania](https://en.wikipedia.org/wiki/Tanzania).
 
 ## Development server
 
@@ -23,5 +23,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
+
+For any concern, don't hesitate to let me know through [email](mailto:rmaswi360@outlook.com) or [WhatsApp](wa.me/255744033739).
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
