@@ -1,5 +1,18 @@
+<div>
+  <mat-toolbar>
+  <span>Dashboard</span>
+</mat-toolbar>
+</div>
 
-  <svg 
+<div>
+<router-outlet></router-outlet>
+</div>
+<!-- <footer>Ujinga</footer> -->
+
+<div class="footer">
+  {{footer}}
+</div>
+<svg 
   id="clouds" 
   alt="Gray Clouds Background" 
   xmlns="http://www.w3.org/2000/svg" 
@@ -12,9 +25,3 @@
     transform="translate(142.69 -634.312)" 
     fill="#eee"/>
   </svg>
-
-<router-outlet></router-outlet>
-
-<div class="footer">
-  {{footer}}
-</div>
