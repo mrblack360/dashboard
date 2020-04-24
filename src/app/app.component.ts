@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'dashboard';
+  title = 'COVID-19 dashboard';
+  footer = 'Maswi(mrblack360) • Dashboard • (stable) ∧ @0.0.0';
 }
