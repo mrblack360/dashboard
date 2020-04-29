@@ -8,10 +8,18 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NewsComponent } from './pages/news/news.component';
+import { HelpComponent } from './pages/help/help.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NewsComponent,
+    HelpComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
