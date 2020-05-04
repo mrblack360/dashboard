@@ -1,1 +1,19 @@
-<p>help works!</p>
+<div class="main-content">
+  <mat-card class="main-card">
+    <mat-card-subtitle>
+      Kwa maoni, ushauri, dukuduku au suala lolote, usisite kuwasiliana yeyote
+      katika timu yetu ya msaada.
+    </mat-card-subtitle>
+  </mat-card>
+
+  <div>
+    <h3 class="head">Timu ya Msaada</h3>
+    <mat-grid-list cols="2" rowHeight="5:1">
+      <mat-grid-tile *ngFor="let member of members">
+        <mat-card>
+          {{ member.name }}
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
