@@ -12,5 +12,5 @@ export class AppComponent {
     { label: 'Kuhusu', link: 'about' },
     { label: 'Msaada', link: 'help' },
   ];
-  footer = 'Maswi(mrblack360) • Dashboard • (stable) ∧ @0.0.0';
+  footer = 'Maswi M.R. • Dashboard • (stable) ∧ @0.0.0';
 }
