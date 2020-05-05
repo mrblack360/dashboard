@@ -3,36 +3,55 @@
     Takwimu za ugonjwa wa COVID-19 nchini Tanzania
   </mat-card-title>
   <mat-card-subtitle>
-    Kwa mujibu wa chuo kikuu cha <a href="https://wa.me/">John Hopkins</a>
+    Kwa mujibu wa chuo kikuu cha
+    <a href="https://github.com/CSSEGISandData/COVID-19" target="_blank"
+      >John Hopkins</a
+    >
+    mnamo {{ latestDate | date }}
   </mat-card-subtitle>
 </mat-card>
-<!-- 
-<p>{{ myData.Countries[216] | json }}</p>
+
 <div>
-  <mat-grid-list cols="2" rowHeight="5:1">
+  <mat-grid-list cols="2" rowHeight="5:3">
     <mat-grid-tile>
+      <mat-grid-tile-header>Nchini Tanzania</mat-grid-tile-header>
       <mat-card class="cards">
-        <mat-card-title>Jumla Ya Maambukizi</mat-card-title>
-        <mat-card-content>{{
-          myData.Countries[216].TotalConfirmed
-        }}</mat-card-content>
+        <mat-toolbar color="primary">
+          <span>Jumla ya Maambukizi</span>
+          <span class="fill-remaining-space"></span>
+          <span>{{ latestCountryData.Confirmed | json }}</span>
+        </mat-toolbar>
+        <mat-toolbar color="warn">
+          <span>Jumla ya Vifo</span>
+          <span class="fill-remaining-space"></span>
+          <span>{{ latestCountryData.Deaths | json }}</span>
+        </mat-toolbar>
+        <mat-toolbar color="accent">
+          <span>Jumla Ya Waliopona</span>
+          <span class="fill-remaining-space"></span>
+          <span>{{ latestCountryData.Recovered | json }}</span>
+        </mat-toolbar>
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile>
+      <mat-grid-tile-header>Duniani</mat-grid-tile-header>
       <mat-card class="cards">
-        <mat-card-title>Jumla Ya Vifo</mat-card-title>
-        <mat-card-content>{{
-          myData.Countries[216].TotalDeaths
-        }}</mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card class="cards">
-        <mat-card-title>Jumla Ya Waliopona</mat-card-title>
-        <mat-card-content>{{
-          myData.Countries[216].TotalRecovered
-        }}</mat-card-content>
+        <mat-toolbar color="primary">
+          <span>Jumla ya Maambukizi</span>
+          <span class="fill-remaining-space"></span>
+          <span>{{ WorldData.TotalConfirmed | json }}</span>
+        </mat-toolbar>
+        <mat-toolbar color="warn">
+          <span>Jumla ya Vifo</span>
+          <span class="fill-remaining-space"></span>
+          <span>{{ WorldData.TotalDeaths | json }}</span>
+        </mat-toolbar>
+        <mat-toolbar color="accent">
+          <span>Jumla Ya Waliopona</span>
+          <span class="fill-remaining-space"></span>
+          <span>{{ WorldData.TotalRecovered | json }}</span>
+        </mat-toolbar>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
-</div> -->
+</div>
