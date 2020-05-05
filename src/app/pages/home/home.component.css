@@ -2,3 +2,12 @@
   width: 800%;
   margin: 10px;
 }
+.fill-remaining-space {
+  flex: 1 1 auto;
+  text-align: right;
+}
+mat-grid-tile-header {
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 10px;
+}

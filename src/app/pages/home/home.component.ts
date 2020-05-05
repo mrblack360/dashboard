@@ -9,13 +9,27 @@ import { coerceCssPixelValue } from '@angular/cdk/coercion';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  myData = [];
+  CountryData = [];
+  WorldData: WorldData;
+  latestCountryData: any;
+  latestDate: Date;
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.sendGetRequest().subscribe((data: any[]) => {
-      this.myData = data;
+    this.dataService.getCountryData().subscribe((data: any[]) => {
+      this.CountryData = data;
+      this.latestCountryData = data[data.length - 1];
+      this.latestDate = data[data.length - 1].Date;
+    });
+    this.dataService.getWorldData().subscribe((data: any) => {
+      this.WorldData = data;
     });
   }
+}
+
+export interface WorldData {
+  TotalConfirmed: number;
+  TotalDeaths: number;
+  TotalRecovered: number;
 }
