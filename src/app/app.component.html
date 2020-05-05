@@ -1,5 +1,5 @@
 <div class="content">
-  <div>
+  <div class="header">
     <mat-toolbar>
       <img src="favicon.ico" class="logo" routerLink="/home" />
       <span class="title" routerLink="/home">{{ title }}</span>
@@ -21,6 +21,8 @@
     <router-outlet></router-outlet>
   </div>
   <div class="footer">
-    {{ footer }}
+    <a class="footer-link" href="https://github.com/mrblack360" target="_blank"
+      >Maswi, M. R. </a
+    >{{ footer }}
   </div>
 </div>
