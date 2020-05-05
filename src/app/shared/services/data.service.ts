@@ -5,9 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class DataService {
-  private apiServer = 'https://api.covid19api.com/summary';
+  private countryUrl = 'https://api.covid19api.com/country/tanzania';
+  private worldUrl = 'https://api.covid19api.com/world/total';
   constructor(private httpClient: HttpClient) {}
-  public sendGetRequest() {
-    return this.httpClient.get(this.apiServer);
+  public getCountryData() {
+    return this.httpClient.get(this.countryUrl);
+  }
+  public getWorldData() {
+    return this.httpClient.get(this.worldUrl);
   }
 }
