@@ -6,3 +6,56 @@ mat-grid-tile-header {
   letter-spacing: 2px;
   margin: 10px;
 }
+i {
+  font-size: 30px;
+  padding-left: 5%;
+  padding-top: 5px;
+  padding-right: 5%;
+  padding-bottom: 15px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+mat-grid-list:mat-card {
+  width: 100%;
+  height: 100%;
+}
+.mat-grid-tile .mat-figure {
+  align-items: flex-start;
+}
+.whatsapp {
+  color: green;
+}
+.email {
+  color: brown;
+}
+.facebook {
+  color: rgb(12, 70, 231);
+}
+.twitter,
+.linkedin {
+  color: #04b5fc;
+}
+.contact-card {
+  min-width: 250px;
+  margin-top: 10px;
+}
+.dp {
+  border-radius: 50%;
+}
+.row {
+  display: table;
+  width: 100%; /*Optional*/
+  table-layout: fixed; /*Optional*/
+  /* border-spacing: 10px; Optional */
+}
+.column {
+  float: left;
+  width: 20%;
+  margin: 10px;
+  max-width: 300px;
+}
+h2 {
+  margin: 5px 0 0 0;
+}

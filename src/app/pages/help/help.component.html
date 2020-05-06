@@ -1,19 +1,37 @@
 <div class="main-content">
   <mat-card class="main-card">
     <mat-card-subtitle>
-      Kwa maoni, ushauri, dukuduku au suala lolote, usisite kuwasiliana yeyote
-      katika timu yetu ya msaada.
+      Kwa maoni, ushauri, dukuduku au suala lolote, usisite kuwasiliana na
+      yeyote kutoka katika timu zetu hii ya msaada.
     </mat-card-subtitle>
   </mat-card>
 
-  <div>
-    <!-- <mat-grid-list cols="2" rowHeight="5:1">
-      <mat-grid-tile-header>Timu ya Msaada</mat-grid-tile-header>
-      <mat-grid-tile *ngFor="let member of members">
-        <mat-card>
-          {{ member.name }}
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list> -->
+  <div *ngFor="let group of members" class="row">
+    <h2>{{ group.group | titlecase }}</h2>
+    <mat-divider></mat-divider>
+    <mat-card
+      *ngFor="let member of group.members; let a = index"
+      class="contact-card column"
+    >
+      <mat-card-header>
+        <mat-card-title>{{ member.name }}</mat-card-title>
+        <mat-card-subtitle>{{ member.nickName }}</mat-card-subtitle>
+        <img
+          mat-card-avatar
+          class="dp"
+          src="../../../assets/members/chingalo.png"
+        />
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <span *ngFor="let icon of icons; let i = index">
+        <a
+          [class]="icon.class"
+          [href]="icon.link + member.links[i]"
+          target="_blank"
+        >
+          <i [class]="icon.name"></i>
+        </a>
+      </span>
+    </mat-card>
   </div>
 </div>
