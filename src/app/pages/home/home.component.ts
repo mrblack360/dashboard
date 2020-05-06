@@ -38,15 +38,19 @@ export class HomeComponent implements OnInit {
       this.recoveredDataPoints = getRecoveredDataPoints(data);
 
       chart.data[0].set('dataPoints', this.confirmedDataPoints);
-      chart.data[1].set('dataPoints', this.deathDataPoints);
-      chart.data[2].set('dataPoints', this.recoveredDataPoints);
+      chart.data[2].set('dataPoints', this.deathDataPoints);
+      chart.data[1].set('dataPoints', this.recoveredDataPoints);
     });
     this.dataService.getWorldData().subscribe((data: any) => {
       this.WorldData = data;
     });
 
+    CanvasJS.addColorSet('customColorSet', ['#FF9933', '#1569C7', '#F44336']);
+
     let chart = new CanvasJS.Chart('chartContainer', {
       animationEnabled: true,
+      colorSet: 'customColorSet',
+      backgroundColor: 'transparent',
       title: {
         text: 'Takwimu za ugonjwa wa COVID-19 Nchini Tanzania',
       },
@@ -75,14 +79,15 @@ export class HomeComponent implements OnInit {
         {
           type: 'area',
           showInLegend: true,
-          name: 'Wagonjwa waliofariki',
+          name: 'Wagonjwa waliopona',
           yValueFormatString: '#,##0',
           dataPoints: [],
         },
         {
           type: 'area',
+          // color: '#F44336',
           showInLegend: true,
-          name: 'Wagonjwa waliopona',
+          name: 'Wagonjwa waliofariki',
           yValueFormatString: '#,##0',
           dataPoints: [],
         },
