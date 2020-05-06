@@ -1,7 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DataService } from '../../shared/services/data.service';
+import { DataPoint } from '../../shared/interfaces/data-point';
+import { WorldData } from '../../shared/interfaces/world-data';
+
 import * as CanvasJS from '../../../assets/canvasjs/canvasjs/canvasjs.min';
+
+import {
+  getConfirmedDataPoints,
+  getDeathDataPoints,
+  getRecoveredDataPoints,
+} from '../../shared/helpers/data-filters';
 
 @Component({
   selector: 'app-home',
@@ -13,10 +22,9 @@ export class HomeComponent implements OnInit {
   WorldData: WorldData;
   latestCountryData: any;
   latestDate: Date;
-  confirmedDataPoints: dataPoint[];
-  deathDataPoints: dataPoint[];
-  recoveredDataPoints: dataPoint[];
-  chart;
+  confirmedDataPoints: DataPoint[];
+  deathDataPoints: DataPoint[];
+  recoveredDataPoints: DataPoint[];
 
   constructor(private dataService: DataService) {}
 
@@ -25,9 +33,9 @@ export class HomeComponent implements OnInit {
       this.CountryData = data;
       this.latestCountryData = data[data.length - 1];
       this.latestDate = data[data.length - 1].Date;
-      this.confirmedDataPoints = this.getConfirmedDataPoints(data);
-      this.deathDataPoints = this.getDeathDataPoints(data);
-      this.recoveredDataPoints = this.getRecoveredDataPoints(data);
+      this.confirmedDataPoints = getConfirmedDataPoints(data);
+      this.deathDataPoints = getDeathDataPoints(data);
+      this.recoveredDataPoints = getRecoveredDataPoints(data);
 
       chart.data[0].set('dataPoints', this.confirmedDataPoints);
       chart.data[1].set('dataPoints', this.deathDataPoints);
@@ -44,12 +52,16 @@ export class HomeComponent implements OnInit {
       },
       axisY: {
         includeZero: false,
+        title: 'Idadi ya Watu',
       },
       toolTip: {
         shared: true,
       },
       legend: {
         fontSize: 13,
+        verticalAlign: 'top',
+        horizontalAlign: 'left',
+        dockInsidePlotArea: true,
       },
       data: [
         {
@@ -76,57 +88,6 @@ export class HomeComponent implements OnInit {
         },
       ],
     });
-    console.log(chart);
-
     chart.render();
   }
-  getConfirmedDataPoints(countryData: any[]): dataPoint[] {
-    let dataPoints: dataPoint[] = [];
-    let x: Date;
-    let y: number;
-    let DataPointObject: dataPoint;
-    for (let i = 53; i < countryData.length; i++) {
-      x = new Date(countryData[i].Date);
-      y = countryData[i].Confirmed;
-      DataPointObject = { x: x, y: y };
-      dataPoints.push(DataPointObject);
-    }
-    return dataPoints;
-  }
-  getDeathDataPoints(countryData: any[]): dataPoint[] {
-    let dataPoints: dataPoint[] = [];
-    let x: Date;
-    let y: number;
-    let DataPointObject: dataPoint;
-    for (let i = 53; i < countryData.length; i++) {
-      x = new Date(countryData[i].Date);
-      y = countryData[i].Deaths;
-      DataPointObject = { x: x, y: y };
-      dataPoints.push(DataPointObject);
-    }
-    return dataPoints;
-  }
-  getRecoveredDataPoints(countryData: any[]): dataPoint[] {
-    let dataPoints: dataPoint[] = [];
-    let x: Date;
-    let y: number;
-    let DataPointObject: dataPoint;
-    for (let i = 53; i < countryData.length; i++) {
-      x = new Date(countryData[i].Date);
-      y = countryData[i].Recovered;
-      DataPointObject = { x: x, y: y };
-      dataPoints.push(DataPointObject);
-    }
-    return dataPoints;
-  }
-}
-
-export interface WorldData {
-  TotalConfirmed: number;
-  TotalDeaths: number;
-  TotalRecovered: number;
-}
-export interface dataPoint {
-  x: Date;
-  y: number;
 }
