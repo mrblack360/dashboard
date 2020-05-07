@@ -26,7 +26,7 @@
           <span class="fill-remaining-space"></span>
           <span>{{ latestCountryData.Deaths | json }}</span>
         </mat-toolbar>
-        <mat-toolbar color="accent">
+        <mat-toolbar color="#1569C7">
           <span>Jumla Ya Waliopona</span>
           <span class="fill-remaining-space"></span>
           <span>{{ latestCountryData.Recovered | json }}</span>
@@ -39,19 +39,20 @@
         <mat-toolbar color="primary">
           <span>Jumla ya Maambukizi</span>
           <span class="fill-remaining-space"></span>
-          <span>{{ WorldData.TotalConfirmed | json }}</span>
+          <span>{{ WorldData.TotalConfirmed | json | number }}</span>
         </mat-toolbar>
         <mat-toolbar color="warn">
           <span>Jumla ya Vifo</span>
           <span class="fill-remaining-space"></span>
-          <span>{{ WorldData.TotalDeaths | json }}</span>
+          <span>{{ WorldData.TotalDeaths | json | number }}</span>
         </mat-toolbar>
-        <mat-toolbar color="accent">
+        <mat-toolbar color="#1569C7">
           <span>Jumla Ya Waliopona</span>
           <span class="fill-remaining-space"></span>
-          <span>{{ WorldData.TotalRecovered | json }}</span>
+          <span>{{ WorldData.TotalRecovered | json | number }}</span>
         </mat-toolbar>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
+  <div id="chartContainer" class="chart-container"></div>
 </div>

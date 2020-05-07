@@ -8,9 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Dashboard';
   buttons = [
+    { label: 'Nyumbani', link: 'home' },
     { label: 'Habari', link: 'news' },
     { label: 'Kuhusu', link: 'about' },
     { label: 'Msaada', link: 'help' },
   ];
-  footer = 'Maswi M.R. • Dashboard • (stable) ∧ @0.0.0';
+  footer = ' • Dashboard • (stable) ∧ @0.0.0';
 }
