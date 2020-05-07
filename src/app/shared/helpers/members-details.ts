@@ -94,13 +94,13 @@ export const Members = [
         name: 'Kalebo W',
         nickName: 'Mwamba',
         imageUrl: 'kalebu.png',
-        links: ['', '', '', '', ''],
+        links: ['kalebmabutwa@gmail.com', '', '', '', ''],
       },
       {
         name: 'Moyo, P',
         nickName: 'THeart',
         imageUrl: 'moyo.png',
-        links: ['', '', '', '', ''],
+        links: ['poisentm@gmail.com', '', '', '', ''],
       },
       {
         name: 'Undefined',
