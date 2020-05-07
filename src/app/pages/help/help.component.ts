@@ -8,6 +8,14 @@ import { Members } from '../../shared/helpers/members-details';
   styleUrls: ['./help.component.css'],
 })
 export class HelpComponent implements OnInit {
+  imageAssetsUrl = '../../../assets/members/';
+  subject = [
+    '?subject=DASHBOARD%20HELP&bcc=rmaswi360@outlook.com',
+    '?text=DASHBOARD HELP',
+    '',
+    '',
+    '',
+  ];
   members = Members;
   icons = [
     { name: 'fa fa-envelope', class: 'email', link: 'mailto:' },

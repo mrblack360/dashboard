@@ -31,11 +31,13 @@ mat-grid-list:mat-card {
   color: brown;
 }
 .facebook {
-  color: rgb(12, 70, 231);
+  color: #4267b2;
 }
-.twitter,
-.linkedin {
+.twitter {
   color: #04b5fc;
+}
+.linkedin {
+  color: #0077b5;
 }
 .contact-card {
   min-width: 250px;

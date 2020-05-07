@@ -19,14 +19,14 @@
         <img
           mat-card-avatar
           class="dp"
-          src="../../../assets/members/chingalo.png"
+          [src]="imageAssetsUrl + member.imageUrl"
         />
       </mat-card-header>
       <mat-divider></mat-divider>
       <span *ngFor="let icon of icons; let i = index">
         <a
           [class]="icon.class"
-          [href]="icon.link + member.links[i]"
+          [href]="icon.link + member.links[i] + subject[i]"
           target="_blank"
         >
           <i [class]="icon.name"></i>
