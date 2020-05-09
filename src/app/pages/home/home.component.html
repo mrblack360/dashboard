@@ -11,48 +11,53 @@
   </mat-card-subtitle>
 </mat-card>
 
-<div>
-  <mat-grid-list cols="2" rowHeight="5:3">
-    <mat-grid-tile>
-      <mat-grid-tile-header>Nchini Tanzania</mat-grid-tile-header>
-      <mat-card class="cards">
-        <mat-toolbar color="primary">
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card col">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-dark list-title">
+          Nchini Tanzania
+        </li>
+        <li class="list-group-item parent list-group-item-warning">
           <span>Jumla ya Maambukizi</span>
           <span class="fill-remaining-space"></span>
           <span>{{ latestCountryData.Confirmed | json }}</span>
-        </mat-toolbar>
-        <mat-toolbar color="warn">
+        </li>
+        <li class="list-group-item parent list-group-item-danger">
           <span>Jumla ya Vifo</span>
           <span class="fill-remaining-space"></span>
           <span>{{ latestCountryData.Deaths | json }}</span>
-        </mat-toolbar>
-        <mat-toolbar color="#1569C7">
+        </li>
+        <li class="list-group-item parent list-group-item-primary">
           <span>Jumla Ya Waliopona</span>
           <span class="fill-remaining-space"></span>
           <span>{{ latestCountryData.Recovered | json }}</span>
-        </mat-toolbar>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-grid-tile-header>Duniani</mat-grid-tile-header>
-      <mat-card class="cards">
-        <mat-toolbar color="primary">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card col">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-dark list-title">Duniani</li>
+        <li class="list-group-item parent list-group-item-warning">
           <span>Jumla ya Maambukizi</span>
           <span class="fill-remaining-space"></span>
           <span>{{ WorldData.TotalConfirmed | json | number }}</span>
-        </mat-toolbar>
-        <mat-toolbar color="warn">
+        </li>
+        <li class="list-group-item parent list-group-item-danger">
           <span>Jumla ya Vifo</span>
           <span class="fill-remaining-space"></span>
           <span>{{ WorldData.TotalDeaths | json | number }}</span>
-        </mat-toolbar>
-        <mat-toolbar color="#1569C7">
+        </li>
+        <li class="list-group-item parent list-group-item-primary">
           <span>Jumla Ya Waliopona</span>
           <span class="fill-remaining-space"></span>
           <span>{{ WorldData.TotalRecovered | json | number }}</span>
-        </mat-toolbar>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
-  <div id="chartContainer" class="chart-container"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="chartContainer" class="chart-container col-sm-12"></div>
 </div>

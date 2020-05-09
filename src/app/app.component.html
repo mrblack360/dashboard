@@ -1,20 +1,26 @@
 <div class="content">
   <div class="header">
-    <mat-toolbar>
-      <img src="favicon.ico" class="logo" routerLink="/home" />
-      <span class="title" routerLink="/home">{{ title }}</span>
-      <div class="buttons-container">
-        <button
-          mat-stroked-button
-          *ngFor="let button of buttons"
-          class="button"
-          [routerLink]="button.link"
-          routerLinkActive="active-button"
-        >
-          {{ button.label }}
-        </button>
-      </div>
-    </mat-toolbar>
+    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light blue-greys">
+      <mdb-navbar-brand>
+        <img src="favicon.ico" class="logo" routerLink="/home" />
+        <span class="title" routerLink="/home">{{ title }}</span>
+      </mdb-navbar-brand>
+
+      <links>
+        <div class="buttons-container">
+          <button
+            mdbWavesEffect
+            type="button"
+            class="button btn btn-outline-dark"
+            *ngFor="let button of buttons"
+            [routerLink]="button.link"
+            routerLinkActive="active-button"
+          >
+            {{ button.label }}
+          </button>
+        </div>
+      </links>
+    </mdb-navbar>
   </div>
 
   <div class="outlet-container">

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DataService } from '../../shared/services/data.service';
+import { DataService } from '../../shared/services/data/data.service';
 import { DataPoint } from '../../shared/interfaces/data-point';
 import { WorldData } from '../../shared/interfaces/world-data';
 
