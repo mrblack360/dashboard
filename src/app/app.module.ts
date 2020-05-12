@@ -42,8 +42,6 @@ import { AboutComponent } from './pages/about/about.component';
     MatDividerModule,
     MatListModule,
     MatIconModule,
-    NavbarModule,
-    WavesModule,
     ButtonsModule,
   ],
   providers: [],
