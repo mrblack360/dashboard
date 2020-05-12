@@ -53,15 +53,23 @@ export class HomeComponent implements OnInit {
       backgroundColor: 'transparent',
       title: {
         text: 'Takwimu za ugonjwa wa COVID-19 Nchini Tanzania',
+        fontColor: 'white',
       },
       axisY: {
         includeZero: false,
         title: 'Idadi ya Watu',
+        titleFontColor: 'white',
+        labelFontColor: 'white',
+      },
+      axisX: {
+        titleFontColor: 'white',
+        labelFontColor: 'white',
       },
       toolTip: {
         shared: true,
       },
       legend: {
+        fontColor: 'white',
         fontSize: 13,
         verticalAlign: 'top',
         horizontalAlign: 'left',

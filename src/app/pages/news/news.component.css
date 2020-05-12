@@ -2,6 +2,9 @@
   flex: 1;
   text-align: right;
 }
+.card {
+  margin: 5px 0;
+}
 .card-footer {
   display: flex;
 }
