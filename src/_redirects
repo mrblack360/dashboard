@@ -1,5 +1,5 @@
 # Redirects from what the browser requests to what we serve
 /home               /
-/news               /news
-/about              /about
-/help               /help
+/news               /
+/about              /
+/help               /
