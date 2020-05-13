@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -14,4 +15,11 @@ export class AppComponent {
     { label: 'Msaada', link: 'help' },
   ];
   footer = ' • Dashboard • (stable) ∧ @0.0.0';
+
+  constructor(private metaData: Meta) {
+    metaData.addTag({
+      name: 'keywords',
+      content: 'Dashboard, Tanzania, Dashbodi, Corona, CoronaTZ, COVID-19',
+    });
+  }
 }

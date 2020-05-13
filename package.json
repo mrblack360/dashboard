@@ -24,9 +24,11 @@
     "@fortawesome/angular-fontawesome": "^0.6.1",
     "angular-bootstrap-md": "^9.2.0",
     "angular-cli-ghpages": "^0.6.2",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
     "rxjs": "~6.5.4",
+    "tether": "^1.4.7",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

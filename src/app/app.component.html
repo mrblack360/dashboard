@@ -1,17 +1,31 @@
 <div class="content">
   <div class="header">
-    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light blue-greys">
-      <mdb-navbar-brand>
-        <img src="favicon.ico" class="logo" routerLink="/home" />
-        <span class="title" routerLink="/home">{{ title }}</span>
-      </mdb-navbar-brand>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand">
+        <img src="favicon.ico" class="logo navbar-brand" routerLink="/home" />
+        <span class="title navbar-brand" routerLink="/home">{{ title }}</span>
+      </a>
+      <span class="fill-remaining-space"></span>
 
-      <links>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
         <div class="buttons-container">
+          <span class="sr-only">(current)</span>
           <button
-            mdbWavesEffect
             type="button"
             class="button btn btn-outline-dark"
+            data-toggle="collapse"
+            data-target="#navbarNav"
             *ngFor="let button of buttons"
             [routerLink]="button.link"
             routerLinkActive="active-button"
@@ -19,16 +33,80 @@
             {{ button.label }}
           </button>
         </div>
-      </links>
-    </mdb-navbar>
+      </div>
+    </nav>
   </div>
 
   <div class="outlet-container">
+    <div></div>
     <router-outlet></router-outlet>
   </div>
-  <div class="footer">
-    <a class="footer-link" href="https://github.com/mrblack360" target="_blank"
-      >Maswi, M. R. </a
-    >{{ footer }}
+  <!--Emergency-->
+  <div class="emergency-container">
+    <button
+      type="button"
+      class="emergency-button"
+      data-toggle="modal"
+      data-target="#exampleModalLong"
+    >
+      <i class="fa fa-ambulance"></i> Huduma za Dharura
+    </button>
   </div>
+  <div
+    class="modal fade"
+    id="exampleModalLong"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">
+            Huduma za Dharura
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Ili kuripoti dharura yoyote nchini Tanzania
+          <img src="../assets/tzflag.gif" /> piga simu ya BURE kwenda miongoni
+          mwa namba hizi
+          <div class="list-group">
+            <a href="tel:199" class="list-group-item list-group-item-dark">
+              <i class="fa fa-phone"></i>
+              Simu ya Dharura - Bure
+            </a>
+            <a href="tel:*199%23" class="list-group-item list-group-item-dark"
+              ><i class="fa fa-phone"></i> Simu ya Dharura - Bure</a
+            >
+          </div>
+          Au tembelea
+          <a href="https://moh.go.tz/sw/" target="_blank"
+            >tuvuti ya Wizara ya Afya, Maendeleo ya Jamii, Jinsia Wazee na
+            watoto</a
+          >
+          kwa maelezo zaidi.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Ghairi
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="footer-link" href="https://github.com/mrblack360" target="_blank">
+    <div class="footer">
+      Maswi, M. R.
+      {{ footer }}
+    </div>
+  </a>
 </div>

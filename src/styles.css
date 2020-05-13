@@ -3,11 +3,11 @@
 html,
 body {
   height: 100%;
+  font-family: "SF Regular", "Segoe UI Regular", sans-serif;
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  /* background-image: url(assets/clouds.jpg); */
-  background: #9bb7e0;
+  background-color: rgb(25, 25, 27);
   background-size: cover;
 }
