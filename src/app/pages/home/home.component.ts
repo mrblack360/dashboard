@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../shared/services/data/data.service';
 import { DataPoint } from '../../shared/interfaces/data-point';
 import { WorldData } from '../../shared/interfaces/world-data';
+import { CountryData } from '../../shared/interfaces/country-data';
 
 import * as CanvasJS from '../../../assets/canvasjs/canvasjs/canvasjs.min';
 
@@ -19,8 +20,8 @@ import {
 })
 export class HomeComponent implements OnInit {
   CountryData = [];
-  WorldData: WorldData;
-  latestCountryData: any;
+  WorldData: WorldData = {};
+  latestCountryData: CountryData = {};
   latestDate: Date;
   confirmedDataPoints: DataPoint[];
   deathDataPoints: DataPoint[];
