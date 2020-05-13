@@ -4,7 +4,19 @@
 }
 .card {
   margin: 5px 0;
+  color: white;
 }
 .card-footer {
   display: flex;
+  padding: 1.25rem 0rem;
+}
+.btn {
+  width: 10%;
+  min-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: rgb(54, 55, 65);
+  color: aliceblue;
+  border-color: rgba(152, 162, 175, 0.1);
+  border-radius: 16px;
 }

@@ -8,8 +8,8 @@
     {{ date | date }}
   </mat-card-subtitle>
 </mat-card>
-<div class="card" *ngFor="let article of news.articles">
-  <img [src]="article.image" class="card-img-top" alt="..." />
+<div class="card bg-dark" *ngFor="let article of news.articles">
+  <img [src]="article.image" class="card-img-top" [alt]="article.title" />
   <div class="card-body">
     <h3 class="card-title">{{ article.title }}</h3>
     <p class="card-text">
@@ -17,9 +17,9 @@
     </p>
 
     <div class="card-footer text-muted">
-      <a [href]="article.url" class="btn btn-primary" target="_blank"
-        >Soma Zaidi</a
-      >
+      <a [href]="article.url" class="btn" target="_blank">
+        Soma Zaidi
+      </a>
       <span class="fill-remaining-space"></span>
       <p class="card-text">
         Imechapishwa na
