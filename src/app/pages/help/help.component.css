@@ -13,6 +13,9 @@ i {
   padding-right: 4%;
   padding-bottom: 15px;
 }
+h2 {
+  color: white;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -40,7 +43,8 @@ mat-grid-list:mat-card {
   color: #0077b5;
 }
 .contact-card {
-  min-width: 250px;
+  width: 24%;
+  min-width: 280px;
   margin-top: 10px;
 }
 .dp {
@@ -48,15 +52,14 @@ mat-grid-list:mat-card {
 }
 .row {
   display: table;
-  width: 100%; /*Optional*/
-  table-layout: fixed; /*Optional*/
-  /* border-spacing: 10px; Optional */
+  width: 100%;
+  table-layout: fixed;
 }
 .column {
   float: left;
   width: 20%;
   margin: 10px;
-  max-width: 300px;
+  /* max-width: 300px; */
 }
 h2 {
   margin: 5px 0 0 10px;
