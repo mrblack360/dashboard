@@ -20,3 +20,6 @@
   border-color: rgba(152, 162, 175, 0.1);
   border-radius: 16px;
 }
+.content {
+  padding: 0px 10%;
+}

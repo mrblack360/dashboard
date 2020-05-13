@@ -1,31 +1,33 @@
-<mat-card>
-  <mat-card-title>
-    Habari zinazovuma kuhusiana na Ugonjwa wa COVID-19
-  </mat-card-title>
-  <mat-card-subtitle>
-    Kwa mujibu wa
-    <a href="https://gnews.io/" target="_blank">GNews</a> mnamo
-    {{ date | date }}
-  </mat-card-subtitle>
-</mat-card>
-<div class="card bg-dark" *ngFor="let article of news.articles">
-  <img [src]="article.image" class="card-img-top" [alt]="article.title" />
-  <div class="card-body">
-    <h3 class="card-title">{{ article.title }}</h3>
-    <p class="card-text">
-      {{ article.description }}
-    </p>
-
-    <div class="card-footer text-muted">
-      <a [href]="article.url" class="btn" target="_blank">
-        Soma Zaidi
-      </a>
-      <span class="fill-remaining-space"></span>
+<div class="content">
+  <mat-card>
+    <mat-card-title>
+      Habari zinazovuma kuhusiana na Ugonjwa wa COVID-19
+    </mat-card-title>
+    <mat-card-subtitle>
+      Kwa mujibu wa
+      <a href="https://gnews.io/" target="_blank">GNews</a> mnamo
+      {{ date | date }}
+    </mat-card-subtitle>
+  </mat-card>
+  <div class="card bg-dark" *ngFor="let article of news.articles">
+    <img [src]="article.image" class="card-img-top" [alt]="article.title" />
+    <div class="card-body">
+      <h3 class="card-title">{{ article.title }}</h3>
       <p class="card-text">
-        Imechapishwa na
-        <a [href]="article.source.name">{{ article.source.name }}</a> mnamo
-        {{ article.publishedAt | date }}
+        {{ article.description }}
       </p>
+
+      <div class="card-footer text-muted">
+        <a [href]="article.url" class="btn" target="_blank">
+          Soma Zaidi
+        </a>
+        <span class="fill-remaining-space"></span>
+        <p class="card-text">
+          Imechapishwa na
+          <a [href]="article.source.name">{{ article.source.name }}</a> mnamo
+          {{ article.publishedAt | date }}
+        </p>
+      </div>
     </div>
   </div>
 </div>
