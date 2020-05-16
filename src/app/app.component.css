@@ -22,6 +22,20 @@
   border-color: rgba(152, 162, 175, 0.1);
   border-radius: 16px;
 }
+.icon-button {
+  margin-left: 5px;
+  width: 40px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgb(54, 55, 65);
+  color: aliceblue;
+  border-color: rgba(152, 162, 175, 0.1);
+  border-radius: 16px;
+}
+.navbar-toggler {
+  border: none;
+}
 .active-button {
   background-color: #d3d3d3;
   color: rgb(43, 44, 51);
