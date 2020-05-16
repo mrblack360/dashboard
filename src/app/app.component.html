@@ -41,31 +41,106 @@
     <div></div>
     <router-outlet></router-outlet>
   </div>
-  <!--Emergency-->
-  <div class="emergency-container blink">
+  <!-- Share modal -->
+  <div class="share-container">
+    <button
+      type="button "
+      class="btn share-button blink-2"
+      data-toggle="modal"
+      data-target=".bd-example-modal-xl"
+    >
+      <i class="fa fa-share-alt"></i>&nbsp;Shirikisha Marafiki
+    </button>
+  </div>
+
+  <div
+    class="modal fade bd-example-modal-xl"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="myExtraLargeModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">
+            Shirikisha Marafiki
+          </h3>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="list-group">
+            <a
+              href="whatsapp:/send?text=Takwimu%20na%20Taarifa%20muhimu%20kuhusu%20ugonjwa%20wa%20COVID-19%20kwenye%20dashbodi%20moja%20https://dashbodi.netlify.app"
+              target="_blank"
+              class="list-group-item list-group-item-dark"
+            >
+              <i class="fa fa-whatsapp whatsapp"></i> &nbsp; &nbsp; Whatsapp
+            </a>
+            <a
+              href="https://www.twitter.com/share?text=Takwimu%20na%20Taarifa%20muhimu%20kuhusu%20ugonjwa%20wa%20COVID-19%20kwenye%20dashbodi%20moja&url=https://dashbodi.netlify.app"
+              target="_blank"
+              class="list-group-item list-group-item-dark"
+            >
+              <i class="fa fa-twitter twitter"></i> &nbsp; &nbsp; Twitter
+            </a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?t=Takwimu%20na%20Taarifa%20muhimu%20kuhusu%20ugonjwa%20wa%20COVID-19%20kwenye%20dashbodi%20moja&u=https://dashbodi.netlify.app"
+              target="_blank"
+              class="list-group-item list-group-item-dark"
+            >
+              <i class="fa fa-facebook facebook"></i> &nbsp; &nbsp; Facebook
+            </a>
+            <a
+              href="https://www.linkedin.com/shareArticle?title=Takwimu%20na%20Taarifa%20muhimu%20kuhusu%20ugonjwa%20wa%20COVID-19%20kwenye%20dashbodi%20moja&url=https://dashbodi.netlify.app"
+              target="_blank"
+              class="list-group-item list-group-item-dark"
+            >
+              <i class="fa fa-linkedin linkedin"></i> &nbsp; &nbsp; Linkedin
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Ghairi
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Emergency modal -->
+  <div class="emergency-container">
     <button
       type="button"
-      class="emergency-button blink"
+      class="btn btn-primary emergency-button blink"
       data-toggle="modal"
-      data-target="#exampleModalLong"
+      data-target=".bd-example-modal-lg"
     >
       <i class="fa fa-ambulance"></i> Huduma za Dharura
     </button>
   </div>
+
   <div
-    class="modal fade"
-    id="exampleModalLong"
+    class="modal fade bd-example-modal-lg"
     tabindex="-1"
     role="dialog"
-    aria-labelledby="exampleModalLongTitle"
+    aria-labelledby="myLargeModalLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">
+          <h3 class="modal-title" id="exampleModalLongTitle">
             Huduma za Dharura
-          </h5>
+          </h3>
           <button
             type="button"
             class="close"
@@ -103,6 +178,7 @@
       </div>
     </div>
   </div>
+
   <a class="footer-link" href="https://github.com/mrblack360" target="_blank">
     <div class="footer">
       Maswi, M. R.
