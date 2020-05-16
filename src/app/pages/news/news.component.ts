@@ -9,7 +9,7 @@ import { News } from '../../shared/interfaces/news';
   styleUrls: ['./news.component.css'],
 })
 export class NewsComponent implements OnInit {
-  news: News;
+  news: News = {};
   date = new Date();
   constructor(private newsService: NewsService) {}
 
