@@ -74,7 +74,7 @@ export const Members = [
           'michaellugano8@gmail.com',
           '255742613453',
           'michael.mwajungwa.1',
-          '',
+          'MichaelLugano1',
           '',
         ],
       },
