@@ -9,10 +9,10 @@ import { Meta } from '@angular/platform-browser';
 export class AppComponent {
   title = 'Dashboard';
   buttons = [
-    { label: 'Nyumbani', link: 'home' },
-    { label: 'Habari', link: 'news' },
-    { label: 'Kuhusu', link: 'about' },
-    { label: 'Msaada', link: 'help' },
+    { label: 'Nyumbani', icon: 'fa fa-home', link: 'home' },
+    { label: 'Habari', icon: 'fa fa-rss', link: 'news' },
+    { label: 'Kuhusu', icon: 'fa fa-info', link: 'about' },
+    { label: 'Msaada', icon: 'fa fa-question', link: 'help' },
   ];
   footer = ' • Dashboard • (stable) ∧ @0.0.0';
 

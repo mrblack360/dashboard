@@ -1,7 +1,7 @@
 export interface News {
-  timestamp: number;
-  articleCount: number;
-  articles: [
+  timestamp?: number;
+  articleCount?: number;
+  articles?: [
     {
       title: string;
       description: string;

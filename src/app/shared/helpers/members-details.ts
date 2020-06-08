@@ -14,6 +14,12 @@ export const Members = [
           'eric-chingalo-711630185/',
         ],
       },
+      {
+        name: 'Mduda, Elias',
+        nickName: 'Root',
+        imageUrl: 'mduda.png',
+        links: ['eliusmduda@gmail.com', '255692096797', '', 'EliusMduda', ''],
+      },
     ],
   },
   {
@@ -68,7 +74,7 @@ export const Members = [
           'michaellugano8@gmail.com',
           '255742613453',
           'michael.mwajungwa.1',
-          '',
+          'MichaelLugano1',
           '',
         ],
       },

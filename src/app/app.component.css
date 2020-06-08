@@ -22,6 +22,20 @@
   border-color: rgba(152, 162, 175, 0.1);
   border-radius: 16px;
 }
+.icon-button {
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgb(54, 55, 65);
+  color: aliceblue;
+  border-color: rgba(152, 162, 175, 0.1);
+  border-radius: 16px;
+}
+.navbar-toggler {
+  border: none;
+}
 .active-button {
   background-color: #d3d3d3;
   color: rgb(43, 44, 51);
@@ -53,6 +67,25 @@
 .bg-dark {
   background: linear-gradient(rgb(25, 25, 27), #343a40);
 }
+.share-container {
+  height: fit-content;
+  width: 100%;
+  background: transparent;
+  color: white;
+  z-index: 4000 !important;
+  position: fixed !important;
+  bottom: 80px !important;
+  left: 0 !important;
+  padding: 8px !important;
+  text-align: right;
+}
+.share-button {
+  font-size: 20px;
+  background: linear-gradient(90deg, rgb(0, 120, 212), rgb(0, 188, 242));
+  color: aliceblue;
+  border-color: rgba(152, 162, 175, 0.1);
+  border-radius: 16px 16px 0 16px;
+}
 .emergency-container {
   height: fit-content;
   width: 100%;
@@ -82,9 +115,6 @@
   background-color: #343a40;
   color: azure;
 }
-.h5 {
-  font-size: 30px;
-}
 .footer {
   height: fit-content;
   width: 100%;
@@ -102,5 +132,37 @@
   color: white;
 }
 ::-webkit-scrollbar {
-  width: 0px; /* Remove scrollbar space */
+  width: 0px;
+}
+.blink {
+  animation: blink 3s linear infinite;
+}
+.blink-2 {
+  animation: blink 5s linear infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.whatsapp {
+  color: green;
+}
+.email {
+  color: brown;
+}
+.facebook {
+  color: #4267b2;
+}
+.twitter {
+  color: #04b5fc;
+}
+.linkedin {
+  color: #0077b5;
 }
